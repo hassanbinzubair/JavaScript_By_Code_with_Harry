@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console Methods</title>
+  </head>
+  <body>
+    <script>
+      console.warn("This is a Warning");
+      console.error("This is a Error");
+      // console.assert is use to assert a condition
+      console.assert(2 < 5);
+      console.assert(2 > 5);
+      // console.clear() // is use to clear complete console
+      let obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        e: 5,
+      };
+      console.table(obj); // print in table view
+      console.info("This is an important Info (Same like console.log in view)");
+    //   List of console Methods 
+    console.table(console)
+    // to print how much time spend during a proccess
+    console.time("proccess1")
+    console.timeEnd("proccess1")
+    </script>
+  </body>
+</html>

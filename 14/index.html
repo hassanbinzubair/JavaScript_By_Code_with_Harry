@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: red;
+      }
+    </style>
+    <title>Javascript in Browser</title>
+  </head>
+  <body>
+    <div class="box">Hello World</div>
+    <!--
+         There are three Methods to use javascript in Browser:
+         * Using <script></script> tag directly in html
+         * Using <script src="script.js"></script> to join External script file
+         * Writing js script in Browser's Console By Inspecting Any Web Page
+    -->
+    <script src="script.js">
+      console.log("This will be Ignored"); // it doesn't Work becuase it is in script tag that have src attribute 
+      
+    </script>
+    <script>
+      alert("Welcome from Internal Js Script");
+    </script>
+  </body>
+</html>

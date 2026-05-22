@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searching the DOM</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <div id="box">This is a Box</div>
+    <div class="boxes">This is a Master of Boxes Number 1</div>
+    <div class="boxes">This is a Master of Boxes Number 2</div>
+    <div class="boxes">This is a Master of Boxes Number 3</div>
+    <div class="boxes">This is a Master of Boxes Number 4</div>
+    <div class="boxes">This is a Master of Boxes Number 5</div>
+    <span>Hello ji</span>
+    <span>Hello hi</span>
+    <span>Hello bye</span>
+    <span>Hello OK</span>
+    <span>Hello TATA</span>
+    <input type="text" name="texts" value="Hello World" />
+    <script>
+      // Get Elements By There Class Name
+      let boxes = document.getElementsByClassName("boxes");
+      console.log(boxes);
+      console.log(boxes[0]);
+      boxes[0].style.background = "red";
+      // Get an Element By There ID
+      let box = document.getElementById("box");
+      console.log(box);
+      box.style.background = "goldenrod";
+      // to select an Element using css selecter
+      document.querySelector("span").style.color = "green";
+      // Get an Element By There Tag Name
+      console.log(document.getElementsByTagName("span"));
+      console.log(document.getElementsByName("texts"));
+    </script>
+  </body>
+</html>

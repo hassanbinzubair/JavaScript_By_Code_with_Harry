@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval and setTimeout in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // setTimeout is use to do a task after given time
+      let a = setTimeout(() => {
+        alert("Time is Completed");
+      }, 5000);
+      let b = setTimeout(() => {
+        console.log("Time is Completed");
+      }, 5000);
+      console.log(a); // this is an id of setTimeout
+      console.log(b);
+      let r = confirm("Did you want to run setTimeout ?");
+      if (r == false) {
+        clearTimeout(a);
+      }
+      // setInterval is use to run a code again & again after given delay
+
+      let intrvl = setInterval(() => {
+        let random = Math.ceil(Math.random() * 100);
+        console.log(random);
+      }, 2000);
+      // clearInterval(intrvl);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows Object, DOM & BOM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 95vw;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="DOM_flow_chart.svg" alt="DOM flow chart" />
+    <script>
+      window.console.log(window); // window is a globel Object no need to write it every time.
+      // DOM represents the page as html
+      console.log(document);
+      console.log(document.body);
+      // we can change the style of html
+      document.body.style.backgroundColor = "green";
+      //   BOM represents additional objects provided by the browser
+      //   location.href = "https://www.google.com"// redirect to google.com
+    </script>
+  </body>
+</html>

@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a clone of OLX Official Website, for my portfolio. Hassan Raza "
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .logo {
+        padding: 10px;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #ebf1ff;
+        height: 65px;
+      }
+      .navmenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .banner-motors,
+      .banner-property {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .banner-motors:hover,
+      .banner-property:hover {
+        color: #2698e5;
+      }
+      .login {
+        cursor: pointer;
+      }
+      .login-sell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .sell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        height: 45px;
+        width: 104px;
+        background-image: url(/images/04-sell-border.svg);
+        background-position: center;
+        cursor: pointer;
+      }
+      @media (max-width: 500px) {
+        .banner-motors,
+        .banner-property {
+          display: none;
+        }
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 15px;
+      }
+      .location {
+        height: 45px;
+        width: 350px;
+        border: 1px solid;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 15px;
+      }
+      .location-p1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .arrow {
+        padding: 10px;
+      }
+      .search {
+        height: 45px;
+        width: 750px;
+        border: 1px solid;
+        border-radius: 7px 0px 0px 7px;
+        display: flex;
+        align-items: center;
+      }
+      .search-btn {
+        background-color: #002f34;
+        border: 1px solid #002f34;
+        border-radius: 0px 7px 7px 0px;
+        height: 45px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .search-text {
+        color: white;
+      }
+      .category-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .cb {
+        cursor: pointer;
+      }
+      .cb:hover {
+        color: #2698e5;
+      }
+      .banner-ad {
+        height: 180px;
+        width: 90vw;
+        max-width: 1280px;
+        background-image: url(/images/07-banner-ad.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 30px;
+      }
+      @media (max-width: 1280px) {
+        .banner-ad {
+          background-size: 100%;
+        }
+      }
+      @media (max-width: 1280px) {
+        .cb {
+          display: none;
+        }
+        .search {
+          border-radius: 7px;
+        }
+        .search-btn {
+          border-radius: 7px;
+        }
+      }
+      .category-text {
+        width: 120px;
+      }
+      .category-section {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .heading-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70vw;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .cs {
+        cursor: pointer;
+      }
+      .view-more {
+        cursor: pointer;
+      }
+      .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 70vw;
+        margin: auto;
+        gap: 20px;
+      }
+      .card {
+        width: 280px;
+        height: 400px;
+        border: 0.5px solid #d4d4d4;
+        border-radius: 5px;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+      }
+      .product-address {
+        color: #406367;
+      }
+      .product-uploaded {
+        color: #406367;
+      }
+      .price,
+      .product-info,
+      .product-address,
+      .product-uploaded {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .ad-inline {
+        height: 400px;
+        width: 70vw;
+        border: 1px solid gray;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-image: url(/images/Hassan\ Raza\ -\ Coder\ and\ Developer.png);
+      }
+      .download-app {
+        background-color: #f7f8f9;
+        height: 280px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .app-stores {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .download-app-text2 {
+        color: #3a77ff;
+      }
+      @media (max-width: 1000px) {
+        .download-app-text {
+          display: none;
+        }
+      }
+      .category-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #f2f4f5;
+        height: 300px;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .category-footer-line {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .category-footer-line5 {
+        flex-direction: row;
+      }
+      @media (max-width: 800px) {
+        .category-footer-line1,
+        .category-footer-line2 {
+          display: none;
+        }
+      }
+      .footer {
+        background-color: #002f34;
+        height: 60px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 30px;
+      }
+      .c-f-items {
+        cursor: pointer;
+      }
+      .c-f-items:hover {
+        color: #3c6064;
+      }
+      /* Image Styles */
+      .banner-motors-img,
+      .banner-property-img {
+        width: 40px;
+      }
+      .category-image {
+        width: 120px;
+      }
+      .card-img {
+        width: 280px;
+        height: 250px;
+        border: 0.5px solid #d4d4d4;
+        border-radius: 5px;
+      }
+      .app-img {
+        height: 180px;
+      }
+      .app-img-link {
+        height: 40px;
+      }
+      /* Text Styles */
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .banner-text {
+        font-weight: 700;
+      }
+      .login {
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      .login:hover {
+        text-decoration: none;
+      }
+      .sell {
+        font-weight: 700;
+      }
+      .search-text {
+        font-weight: 700;
+      }
+      .all-cb {
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .category-text {
+        text-align: center;
+        font-weight: 600;
+      }
+      .view-more {
+        font-weight: 700;
+      }
+      .price {
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .category-footer-headings {
+        font-weight: 800;
+      }
+      .pakistan {
+        font-weight: bolder;
+      }
+      .footer {
+        font-size: 18px;
+      }
+      ::-webkit-scrollbar {
+        background-color: darkblue;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #3f7aff;
+      }
+      /* Scrollbar's Track */
+      ::-webkit-scrollbar-track-piece {
+        background-color: #ebf1ff;
+      }
+    </style>
+    <title>
+      OLX - Buy and Sell for free anywhere in Pakistan with OLX online
+      classifieds | Hassan Raza
+    </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navmenu">
+          <div class="logo">
+            <svg
+              height="30"
+              fill="#3F7AFF"
+              viewBox="0 0 36.289 20.768"
+              alt="Logo"
+              class="_8113da19"
+            >
+              <path
+                d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z"
+              ></path>
+            </svg>
+          </div>
+          <div class="banner-motors">
+            <img
+              src="images/01-banner-motor.png"
+              alt="Motors"
+              class="banner-motors-img"
+            />
+            <div class="banner-text">Motors</div>
+          </div>
+          <div class="banner-property">
+            <img
+              src="images/02-banner-property.png"
+              alt="Property"
+              class="banner-property-img"
+            />
+            <div class="banner-text">Property</div>
+          </div>
+        </div>
+        <div class="login-sell">
+          <div class="login">Login</div>
+          <div class="sell">
+            <img src="images/03-plus-sell.svg" alt="Plus" class="plus-sell" />
+            <div class="sell-text">SELL</div>
+          </div>
+        </div>
+      </nav>
+      <div class="nav2">
+        <div class="location">
+          <div class="location-p1">
+            <img
+              src="images/05-lacation-logo.svg"
+              class="location-logo"
+              alt="Location"
+            />
+            <div class="location-text">Pakistan</div>
+          </div>
+          <img src="images/06-down-arrow.svg" alt="Down Arrow" class="arrow" />
+        </div>
+        <div class="search">Find Cars, Mobile Phones and more ...</div>
+        <div class="search-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            width="25"
+            height="25"
+            viewBox="0 0 1024 1024"
+            class="_11996820"
+          >
+            <path
+              d="M448 725.33c-152.92 0-277.33-124.41-277.33-277.33S295.08 170.67 448 170.67 725.33 295.08 725.33 448 600.92 725.33 448 725.33zm436.44 98.78v.02L732.52 672.19c48.77-61.78 78.15-139.54 78.15-224.19 0-199.98-162.7-362.67-362.67-362.67S85.33 248.03 85.33 448c0 199.98 162.69 362.67 362.67 362.67 84.63 0 162.41-29.38 224.17-78.15l206.14 206.15h60.36v-60.33l-54.23-54.23z"
+            ></path>
+          </svg>
+          <div class="search-text">Search</div>
+        </div>
+      </div>
+      <div class="category-banner">
+        <div class="all-cb">
+          All Categories
+          <img src="images/06-down-arrow.svg" alt="Down Arrow" />
+        </div>
+        <div class="mobile-cb cb">Mobile Phones</div>
+        <div class="car-cb cb">Cars</div>
+        <div class="bike-cb cb">Motorcycles</div>
+        <div class="house-cb cb">Houses</div>
+        <div class="video-cb cb">Video-Audios</div>
+        <div class="tablet-cb cb">Tablets</div>
+        <div class="land-cb cb">Land & Plots</div>
+      </div>
+    </header>
+    <div class="banner-ad"></div>
+    <div class="category-section">
+      <div class="mobile-cs cs">
+        <img class="category-image" src="images/mobiles.png" alt="mobiles" />
+        <div class="category-text">Mobiles</div>
+      </div>
+      <div class="vehicle-cs cs">
+        <img class="category-image" src="images/vehicles.png" alt="vehicles" />
+        <div class="category-text">Vehicles</div>
+      </div>
+      <div class="propertysale-cs cs">
+        <img
+          class="category-image"
+          src="images/property-for-sale.png"
+          alt="property for sale"
+        />
+        <div class="category-text">Property for Sale</div>
+      </div>
+      <div class="propertyrent-cs cs">
+        <img
+          class="category-image"
+          src="images/property-for-rent.png"
+          alt="property for rent"
+        />
+        <div class="category-text">Property for Rent</div>
+      </div>
+      <div class="electronic-cs cs">
+        <img
+          class="category-image"
+          src="images/electronics.png"
+          alt="electronics"
+        />
+        <div class="category-text">Electronics & Home Appliances</div>
+      </div>
+      <div class="bike-cs cs">
+        <img class="category-image" src="images/bikes.png" alt="bikes" />
+        <div class="category-text">Bikes</div>
+      </div>
+      <div class="business-cs cs">
+        <img class="category-image" src="images/business.png" alt="business" />
+        <div class="category-text">Business, Industrial & Agriculture</div>
+      </div>
+      <div class="service-cs cs">
+        <img class="category-image" src="images/services.png" alt="services" />
+        <div class="category-text">Services</div>
+      </div>
+      <div class="jobs-cs cs">
+        <img class="category-image" src="images/jobs.png" alt="jobs" />
+        <div class="category-text">Jobs</div>
+      </div>
+      <div class="animal-cs cs">
+        <img class="category-image" src="images/animals.png" alt="animals" />
+        <div class="category-text">Animals</div>
+      </div>
+      <div class="furniture-cs cs">
+        <img
+          class="category-image"
+          src="images/furniture.png"
+          alt="furniture"
+        />
+        <div class="category-text">Furniture & Home Decor</div>
+      </div>
+      <div class="fashion-cs cs">
+        <img class="category-image" src="images/fashion.png" alt="fashion" />
+        <div class="category-text">Fashion & Beuty</div>
+      </div>
+      <div class="book-cs cs">
+        <img class="category-image" src="images/books.png" alt="books" />
+        <div class="category-text">Books, Sports & Hobbies</div>
+      </div>
+      <div class="kid-cs cs">
+        <img class="category-image" src="images/kids.png" alt="kids" />
+        <div class="category-text">Kids</div>
+      </div>
+    </div>
+    <main>
+      <div class="mobile-phone">
+        <div class="heading-main">
+          <h2>Mobile Phones</h2>
+          <div class="view-more">View More</div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="images/14pro-max.jpeg"
+              alt="iPhone 14 Pro Max 256GB PTA Approved"
+              class="card-img"
+            />
+            <div class="price">Rs 2.25 lac</div>
+            <div class="product-info">iPhone 14 Pro Max 256GB PTA Approved</div>
+            <div class="product-address">Hadayat Ullah Block, Lahore</div>
+            <div class="product-uploaded">6 days ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/11-to-17pro.jpeg"
+              alt="Iphone 11 And Xr to 17 Pro converted 2 month sim time"
+              class="card-img"
+            />
+            <div class="price">Rs 36000</div>
+            <div class="product-info">
+              Iphone 11 And Xr to 17 Pro converted 2 month sim time
+            </div>
+            <div class="product-address">Mujahid Road, Sialkot</div>
+            <div class="product-uploaded">1 week ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/15pro-installment.jpeg"
+              alt="Apple iPhone 15 Pro Pta On Installments"
+              class="card-img"
+            />
+            <div class="price">Rs 2.50 Lac</div>
+            <div class="product-info">
+              Apple iPhone 15 Pro Pta On Installments
+            </div>
+            <div class="product-address">DHA Phase 1, Lahore</div>
+            <div class="product-uploaded">1 week ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/sony-xperia.jpeg"
+              alt="Sony Xperia 1 Mark 5 12/256 Non PTA phone Avl"
+              class="card-img"
+            />
+            <div class="price">Rs 97,500</div>
+            <div class="product-info">
+              Sony Xperia 1 Mark 5 12/256 Non PTA phone Avl.
+            </div>
+            <div class="product-address">Gulberg 3, Lahore</div>
+            <div class="product-uploaded">5 days ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-inline"></div>
+      <div class="cars">
+        <div class="heading-main">
+          <h2>Cars</h2>
+          <div class="view-more">View More</div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="images/vitz.jpeg"
+              alt="Toyota Vitz 2011/14 | Toyota Vitz | Vitz Car For Sale"
+              class="card-img"
+            />
+            <div class="price">Rs 26.75 Lacs</div>
+            <div class="product-info">
+              Toyota Vitz 2011/14 | Toyota Vitz | Vitz Car For Sale
+            </div>
+            <div class="product-address">12 Block, Sargodha</div>
+            <div class="product-uploaded">3 weeks ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/tucson.jpeg"
+              alt="Hyundai Tucson AWD 2020 model"
+              class="card-img"
+            />
+            <div class="price">Rs 69.50 Lacs</div>
+            <div class="product-info">Hyundai Tucson AWD 2020 model</div>
+            <div class="product-address">Tajpura, Lahore</div>
+            <div class="product-uploaded">3 weeks ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/alto.jpeg"
+              alt="Suzuki Alto 2010 good original condition bater cultus santro
+              mehran"
+              class="card-img"
+            />
+            <div class="price">Rs 12.45 Lacs</div>
+            <div class="product-info">
+              Suzuki Alto 2010 good original condition better
+            </div>
+            <div class="product-address">Waris Pura, Faisalabad</div>
+            <div class="product-uploaded">4 weeks ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/mehran.jpeg"
+              alt="Suzuki Mehran VXR 2013 model"
+              class="card-img"
+            />
+            <div class="price">Rs 12.50 Lacs</div>
+            <div class="product-info">Suzuki Mehran VXR 2013 model</div>
+            <div class="product-address">Architects Engineers Society ...</div>
+            <div class="product-uploaded">3 weeks ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="jobs">
+        <div class="heading-main">
+          <h2>Jobs</h2>
+          <div class="view-more">View More</div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="images/computer.jpeg"
+              alt="Computer Operator Required (Onsite Job)"
+              class="card-img"
+            />
+            <div class="price">Computer Operator Required (Onsite Job)</div>
+
+            <div class="product-address">Royal Orchard, Multan</div>
+            <div class="product-uploaded">2 weeks ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/chef.jpeg"
+              alt="Chef for Fast food Resturant"
+              class="card-img"
+            />
+            <div class="price">Chef for Fast food Resturant</div>
+            <div class="product-address">Thokar Niazbaig, Lahore</div>
+            <div class="product-uploaded">8 hours ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/waiter.jpeg"
+              alt="Waiter & Order Taker Required For Restaurant"
+              class="card-img"
+            />
+            <div class="price">
+              Waiter & Order Taker Required For Restaurant
+            </div>
+            <div class="product-address">Model Town, Link Road, Lahore</div>
+            <div class="product-uploaded">1 week ago</div>
+          </div>
+          <div class="card">
+            <img
+              src="images/photocopy.jpeg"
+              alt="Photocopy Operator Required | Job in Lahore | Experienced"
+              class="card-img"
+            />
+            <div class="price">Photocopy Operator Required | Experienced</div>
+            <div class="product-address">
+              PIA Housing Scheme-Block C, Lahore
+            </div>
+            <div class="product-uploaded">2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="download-app">
+        <div class="download-app-text">
+          <h2 class="download-app-text1">Find amazing deals on the go.</h2>
+          <h2 class="download-app-text2">Download OLX app now!</h2>
+        </div>
+        <img
+          src="images/olx-mobile-app.dfa5b83f01c6e269aca19a3faff716a6.webp"
+          alt="Download OLX App"
+          class="app-img"
+        />
+        <div class="app-stores">
+          <img
+            alt="Download The OLX App"
+            class="app-img-link"
+            src="images/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg"
+          /><img
+            alt="Download The OLX App"
+            class="app-img-link"
+            src="images/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg"
+          /><img
+            alt="Download The OLX App"
+            class="app-img-link"
+            src="images/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg"
+          />
+        </div>
+      </div>
+      <hr />
+      <div class="category-footer">
+        <div class="category-footer-line category-footer-line1">
+          <div class="category-footer-headings">Popular Categories</div>
+          <div class="c-f-items">Cars</div>
+          <div class="c-f-items">Flats for rent</div>
+          <div class="c-f-items">Mobile Phones</div>
+          <div class="c-f-items">Jobs</div>
+        </div>
+        <div class="category-footer-line category-footer-line2">
+          <div class="category-footer-headings">Trending Searches</div>
+          <div class="c-f-items">Bikes</div>
+          <div class="c-f-items">Watches</div>
+          <div class="c-f-items">Books</div>
+          <div class="c-f-items">Dogs</div>
+        </div>
+        <div class="category-footer-line category-footer-line3">
+          <div class="category-footer-headings">About Us</div>
+          <div class="c-f-items">OLX Blog</div>
+          <div class="c-f-items">Contact us</div>
+          <div class="c-f-items">OLX for Businusses</div>
+        </div>
+        <div class="category-footer-line category-footer-line4">
+          <div class="category-footer-headings">OLX</div>
+          <div class="c-f-items">Help</div>
+          <div class="c-f-items">Sitemap</div>
+          <div class="c-f-items">Terms of use</div>
+          <div class="c-f-items">Privacy Policy</div>
+        </div>
+        <div class="category-footer-line category-footer-line5">
+          <div class="category-footer-headings">Follow Us</div>
+          <svg
+            class="c-f-items"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M39.5 20a19.5 19.5 0 1 0-39 0 19.5 19.5 0 0 0 39 0z"
+              stroke="currentColor"
+              stroke-linejoin="bevel"
+            ></path>
+            <path
+              d="M24.54 14h2.25l-4.9 5.61 5.77 7.64h-4.52l-3.55-4.63-4.05 4.63h-2.25l5.25-6L13 14h4.64l3.2 4.23 3.7-4.23zm-.78 11.9H25l-8.04-10.62h-1.34l8.13 10.63z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <svg
+            class="c-f-items"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M39.5 20a19.5 19.5 0 1 0-39 0 19.5 19.5 0 0 0 39 0z"
+              stroke="currentColor"
+              stroke-linejoin="bevel"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 11.67a8.36 8.36 0 0 0-8.33 8.38 8.37 8.37 0 0 0 7.03 8.28v-5.86h-2.12v-2.42h2.12V18.2c0-2.1 1.24-3.26 3.15-3.26.9 0 1.86.17 1.86.17v2.06h-1.05c-1.04 0-1.36.65-1.36 1.3v1.58h2.31l-.37 2.42H21.3v5.86a8.37 8.37 0 0 0 7.03-8.28A8.36 8.36 0 0 0 20 11.67z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <svg
+            class="c-f-items"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M39.5 20a19.5 19.5 0 1 0-39 0 19.5 19.5 0 0 0 39 0z"
+              stroke="currentColor"
+              stroke-linejoin="bevel"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.5 22.76v-5.1l4.48 2.55-4.49 2.55zm9.97-6.7a2.16 2.16 0 0 0-1.52-1.53c-1.33-.36-6.7-.36-6.7-.36s-5.37 0-6.7.36a2.16 2.16 0 0 0-1.53 1.52c-.35 1.35-.35 4.16-.35 4.16s0 2.81.35 4.16c.2.74.78 1.33 1.52 1.53 1.34.36 6.7.36 6.7.36s5.38 0 6.71-.36c.74-.2 1.32-.79 1.52-1.53.36-1.35.36-4.16.36-4.16s0-2.8-.36-4.16z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <svg
+            class="c-f-items"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M39.5 20a19.5 19.5 0 1 0-39 0 19.5 19.5 0 0 0 39 0z"
+              stroke="currentColor"
+              stroke-linejoin="bevel"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M24.17 11.67h-8.34a4.17 4.17 0 0 0-4.16 4.16v8.34a4.17 4.17 0 0 0 4.16 4.16h8.34a4.17 4.17 0 0 0 4.16-4.16v-8.34c0-2.3-1.86-4.16-4.16-4.16zm0 1.66a2.5 2.5 0 0 1 2.5 2.5v8.34a2.5 2.5 0 0 1-2.5 2.5h-8.34a2.5 2.5 0 0 1-2.5-2.5v-8.34a2.5 2.5 0 0 1 2.5-2.5h8.34zM20 15.83a4.17 4.17 0 1 0 0 8.34 4.17 4.17 0 0 0 0-8.34zm0 1.67a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm4.45-1.12a.83.83 0 1 0 0-1.66.83.83 0 0 0 0 1.66z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="pakistan">Classifieds in Pakistan.</div>
+        <div class="copyrights">&copy; 2006-2026 OLX</div>
+      </div>
+    </footer>
+  </body>
+</html>

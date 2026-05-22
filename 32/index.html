@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing HTML Classes using JavaScript</title>
+    <style>
+      .yellow {
+        background-color: yellow;
+        color: red;
+      }
+      .red {
+        background-color: red;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first" class="first">first</div>
+    <div id="3" class="second">Second</div>
+    <div id="4" class="third">Third</div>
+    <script>
+      let first = document.getElementById("first");
+    //   first.className = "yellow"; // to change classes
+      first.classList.add("red") // to add a class
+      first.classList.contains("red") // true or false
+      first.classList.remove("red") //to remove a class
+      first.classList.add("yellow")
+      first.classList.replace("yellow", "red") // to replace classes
+      first.classList.toggle("red") // to toggle class
+      first.classList.toggle("yellow")
+    </script>
+  </body>
+</html>

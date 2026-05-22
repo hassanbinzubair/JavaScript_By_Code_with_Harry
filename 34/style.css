@@ -1,0 +1,37 @@
+.box {
+  height: 300px;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  font-size: xx-large;
+}
+.box1 {
+  background-color: blue;
+}
+.box2 {
+  background-color: brown;
+}
+.box3 {
+  background-color: burlywood;
+}
+.box4 {
+  background-color: yellow;
+}
+.box5 {
+  background-color: yellowgreen;
+}
+.box6 {
+  background-color: green;
+}
+.box7 {
+  background-color: orangered;
+}
+.box8 {
+  background-color: olivedrab;
+}
+.box9 {
+  background-color: dodgerblue;
+}
+.box11 {
+  background-color: rgb(137, 226, 21);
+}

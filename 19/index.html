@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Children on an Element</title>
+  </head>
+  <body>
+    <!-- spaces are also count as a text node -->
+    <!-- p is a first child of body -->
+    <p>This is me & I am great!</p>
+    <span>Hello World</span>
+    <!-- script is a last child of body -->
+    <!-- comment is also a node -->
+    <script>
+      console.log(document.body.firstChild);
+      console.log(document.body.lastChild);
+      console.log(document.body.childNodes);
+      //   child nodes are look like array but they are not an array, we can convert them to an array by using this method
+      let arr = Array.from(document.body.childNodes);
+      console.log(arr);
+    </script>
+  </body>
+</html>

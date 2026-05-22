@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Insertion Methods</title>
+  </head>
+  <body>
+    <div id="container">
+      Start Container
+      <div id="first">I am a First Element.</div>
+      End Container
+    </div>
+    <div id="alert">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+      tempore.
+    </div>
+    <script>
+      // some ways to insert elements in DOM
+      let container = document.getElementById("container");
+      let div = document.createElement("div");
+      div.innerHTML = "<h2>This is from Javascript</h2>";
+      // container.appendChild(div);
+      // container.append(div);
+      // container.prepend(div);
+      // container.before(div);
+      container.replaceWith(div);
+    </script>
+  </body>
+</html>

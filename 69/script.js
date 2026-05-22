@@ -1,0 +1,12 @@
+const regex = /very/g;
+const text = "Hassan is a very very nice awesome nice very boy";
+console.log(text.replace(regex, "VERY"));
+const regex2 = /.ice/g;
+const text2 = "Nice is Rice Mice eats Slice";
+console.log(text2.replace(regex2, "Nice"));
+const regex3 = /Apple\sMango/g;
+const text3 = "Apple Mango Apple Mango ";
+console.log(text3.replace(regex3, "Banana Orange"));
+const regex4 = /(Hassan){2}/g;
+const text4 = "HassanHassan RazaRaza ";
+console.log(text4.replace(regex4, "Muhammad Hassan"));
